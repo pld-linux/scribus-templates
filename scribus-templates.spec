@@ -2,7 +2,7 @@ Summary:	Scribus sample templates
 Summary(pl):	Przyk³adowe szablony dla Scribusa
 Name:		scribus-templates
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Publishing
 Source0:	http://www.scribus.org.uk/downloads/%{version}/scribus-temp-all-%{version}.tar.bz2
@@ -11,6 +11,7 @@ URL:		http://www.scribus.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 Requires:	scribus >= 1.2.1
+Requires:	scribus-templates-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

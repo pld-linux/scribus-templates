@@ -1,16 +1,16 @@
 Summary:	Scribus sample templates
 Summary(pl):	Przyk³adowe szablony dla Scribusa
 Name:		scribus-templates
-Version:	1.2
+Version:	1.2.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Publishing
-Source0:	http://www.scribus.org.uk/downloads/1.2/scribus-temp-all-%{version}.tar.bz2
-# Source0-md5:	f93b4a8dfab66c58654deacc5c86fbeb
+Source0:	http://www.scribus.org.uk/downloads/%{version}/scribus-temp-all-%{version}.tar.bz2
+# Source0-md5:	19d102ff16c295e29bb7a051c66c2c58
 URL:		http://www.scribus.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-Requires:	scribus >= 1.2
+Requires:	scribus >= 1.2.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,7 +22,7 @@ Pakiet zawiera przyk³adowe szablony dla Scribusa, takie jak
 broszury, kalendarze i og³oszenia.
 
 %prep
-%setup -q -n scribus-temp-all-%{version}
+%setup -q
 
 %build
 %{__aclocal}
@@ -37,7 +37,8 @@ broszury, kalendarze i og³oszenia.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,8 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/scribus/templates/ad3/*
 %dir %{_datadir}/scribus/templates/ad5
 %{_datadir}/scribus/templates/ad5/*
-%dir %{_datadir}/scribus/templates/br1
-%{_datadir}/scribus/templates/br1/*
 %dir %{_datadir}/scribus/templates/br2
 %{_datadir}/scribus/templates/br2/*
 %dir %{_datadir}/scribus/templates/cal1
@@ -69,13 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/scribus/templates/menu2/*
 %dir %{_datadir}/scribus/templates/nl1-bw
 %{_datadir}/scribus/templates/nl1-bw/*
-%dir %{_datadir}/scribus/templates/nl1
-%{_datadir}/scribus/templates/nl1/*
-%dir %{_datadir}/scribus/templates/nl2
-%{_datadir}/scribus/templates/nl2/*
-%dir %{_datadir}/scribus/templates/presentation
-%{_datadir}/scribus/templates/presentation/*
 %dir %{_datadir}/scribus/templates/prog1
 %{_datadir}/scribus/templates/prog1/*
-%dir %{_datadir}/scribus/templates/textbased
-%{_datadir}/scribus/templates/textbased/*

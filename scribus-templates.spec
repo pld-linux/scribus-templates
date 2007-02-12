@@ -1,5 +1,5 @@
 Summary:	Scribus sample templates
-Summary(pl.UTF-8):   Przykładowe szablony dla Scribusa
+Summary(pl.UTF-8):	Przykładowe szablony dla Scribusa
 Name:		scribus-templates
 Version:	1.2.1
 Release:	2

@@ -1,5 +1,5 @@
 Summary:	Scribus sample templates
-Summary(pl):	Przyk≥adowe szablony dla Scribusa
+Summary(pl.UTF-8):   Przyk≈Çadowe szablony dla Scribusa
 Name:		scribus-templates
 Version:	1.2.1
 Release:	2
@@ -18,9 +18,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package contains sample templates for Scribus, such as brochures,
 calendars and advertisements.
 
-%description -l pl
-Pakiet zawiera przyk≥adowe szablony dla Scribusa, takie jak
-broszury, kalendarze i og≥oszenia.
+%description -l pl.UTF-8
+Pakiet zawiera przyk≈Çadowe szablony dla Scribusa, takie jak
+broszury, kalendarze i og≈Çoszenia.
 
 %prep
 %setup -q
